@@ -1,0 +1,4 @@
+/certificates/*
+/logs/letsencrypt/*
+/logs/nginx/*
+nginx/.well-known/acme-challenge

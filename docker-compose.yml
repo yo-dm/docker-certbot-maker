@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+    nginx:
+        build:
+          context: .
+          dockerfile: ./nginx/Dockerfile
+        container_name: certbot-make
+        ports:
+          - 80:80
+        volumes:
+          - ./logs/nginx:/var/log/nginx
+          - ./logs/letsencrypt:/var/log/letsencrypt
+          - ./nginx/conf.d:/etc/nginx/conf.d
+          - ./nginx/.well-known/acme-challenge:/var/www/html/.well-known/acme-challenge
+          - ./certificates:/etc/letsencrypt/archive
