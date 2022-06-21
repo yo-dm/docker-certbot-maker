@@ -2,7 +2,7 @@ CD in the cloned repository
 
 `docker-compose up -d `  
 Ensure that http://your.DomainName.ext is up  
-`docker exec -it certificate-generator bash`  
+`docker exec -it certbot-maker bash`  
 `certbot certonly --manual -d your.DomainName.ext`  
 
 With GUI or another shell
